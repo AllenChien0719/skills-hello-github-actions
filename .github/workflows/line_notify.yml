@@ -2,8 +2,8 @@ name: Line Notify Stock Price
 
 on:
   schedule:
-    # 每小時運行一次
-    - cron: '0 * * * *'  # UTC 時間，每小時運行
+    # 台北時間每天上午 9 點到下午 6 點，每小時運行一次（UTC+8 對應的 UTC 為凌晨 1 點到上午 10 點）
+    - cron: '0 1-10 * * *'  # 每天 01:00-10:00 UTC，對應台北 09:00-18:00
   workflow_dispatch:  # 允許手動觸發
 
 jobs:
