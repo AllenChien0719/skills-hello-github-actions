@@ -1,11 +1,5 @@
 name: Line Notify Stock Price
 
-on:
-  schedule:
-    # 台北時間每天上午 9 點到下午 6 點，每小時運行一次（UTC+8 對應的 UTC 為凌晨 1 點到上午 10 點）
-    - cron: '0 1-10 * * *'  # 每天 01:00-10:00 UTC，對應台北 09:00-18:00
-  workflow_dispatch:  # 允許手動觸發
-
 jobs:
   notify:
     runs-on: ubuntu-latest  # 使用 Ubuntu 環境執行
